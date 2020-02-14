@@ -1,0 +1,31 @@
+$primary-color: #444;
+$secondary-color: #eece1a;
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.9;
+
+// kindof like a function
+@mixin easeOut {
+    transition: all 0.5s ease-out; // all transitions take x seconds and eases-out(motion)
+}
+@mixin background {
+    @if $show-home-image {
+        &#bg-img {
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;  // backgrounf image covers full page
+            
+            // the translusent layer between the bg image and the text contents using a pseudo element that takes place after the bg-img instead of adding a seperate div in our html 
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1; // overlay goes behind the texts
+                background: rgba($primary-color, $background-opacity);
+            }
+        }
+    }
+}
