@@ -13,7 +13,7 @@ $background-opacity: 0.9;
         &#bg-img {
             background: $home-image;
             background-attachment: fixed;
-            background-size: cover;  // backgrounf image covers full page
+            background-size: cover;  // background image covers full page
             
             // the translusent layer between the bg image and the text contents using a pseudo element that takes place after the bg-img instead of adding a seperate div in our html 
             &:after {
@@ -29,3 +29,29 @@ $background-opacity: 0.9;
         }
     }
 }
+
+// Meidia Query Mixins
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl{
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}
+
