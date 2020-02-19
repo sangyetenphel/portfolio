@@ -12,8 +12,14 @@
   <title>Sangye Tenphel</title>
 </head>
 
-<body id="bg-img">
-  <header>
+<body>
+  <header class="v-header container-fluid">
+    <div class="fullscreen-video-wrap">
+      <video src="videos/video.mp4" autoplay="" loop="">
+      </video>
+    </div>
+    <div class="header-overlay"></div>
+
     <div class="menu-btn">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
@@ -47,32 +53,34 @@
         </li>
       </ul>
     </nav>
+    <main id="home">
+      <h1 class="lg-heading">
+        Sangye
+        <span class="text-secondary">Tenphel</span>
+      </h1>
+      <h2 class="sm-heading">
+        Web Developer, Programmer, AI & Machine Learning Engineer
+      </h2>
+      <div class="icons">
+        <a href="#!">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="#!">
+          <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="#!">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="#!">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+      </div>
+    </main>
   </header>
 
-  <main id="home">
-    <h1 class="lg-heading">
-      Sangye
-      <span class="text-secondary">Tenphel</span>
-    </h1>
-    <h2 class="sm-heading">
-      Web Developer, Programmer, AI & Machine Learning Engineer
-    </h2>
-    <div class="icons">
-      <a href="https://www.facebook.com/sangyetenphel">
-        <i class="fab fa-facebook fa-2x"></i>
-      </a>
-      <a href="https://github.com/sangyetenphel">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/sangyetenphel/">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a href="mailto: sangyetenphel@gmail.com">
-        <i class="fab fa-google fa-2x"></i>
-      </a>
-      
-    </div>
-  </main>
+  
+  
+ 
 
   <script src="js/main.js"></script>
 </body>

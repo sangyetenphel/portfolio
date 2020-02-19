@@ -17,9 +17,11 @@
 
   // Rotate Into X With Menu Lines
   &.close {
+    z-index: 4;
     transform: rotate(180deg);
 
     .btn-line {
+      z-index: 4;
       // Line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
@@ -40,6 +42,7 @@
 
 // Menu Overlay
 .menu {
+  z-index: 3;
   position: fixed;
   top: 0;
   width: 100%;
@@ -90,7 +93,8 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background: url('../img/portrait.jpg');
+      background: url('../img/sangye.jpg') no-repeat center;
+      background-size: cover;
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }
