@@ -1,7 +1,7 @@
 // Widescreens
 @include mediaXl {
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
+  #work{
+    height: 100vh;
   }
 }
 
@@ -53,21 +53,6 @@
     }
   }
 
-  .about-info {
-    grid-template-areas:
-      'bioimage'
-      'bio'
-      'job1'
-      'job2'
-      'job3';
-
-    grid-template-columns: 1fr;
-  }
-
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   #about-landing {
     h1 {
       font-size: 32px;
@@ -91,7 +76,17 @@
       padding: 20px;
     }
   }
+  #work {
+    display: grid;
+    background:url("../img/background.jpg");
+    background-size: cover;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    grid-template-columns: 1fr;
+  }
 }
+
 
 // Smartphones
 @include mediaSm {
@@ -111,10 +106,6 @@
       margin-top: 2rem;
       font-size: 20px;
     }
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
   }
 
   #about-landing {
@@ -140,6 +131,21 @@
       padding: 10px;
     }
     
+  }
+
+  #work {
+    // width: 100vw;
+    display: grid;
+    // align-items: center;
+    // justify-content: center;
+    // background:url("../img/background.jpg");
+    // overflow: hidden;
+    grid-template-columns: 1fr;
+  }
+
+
+  .card {
+    // grid-template-columns: 1fr;
   }
 }
 

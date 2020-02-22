@@ -1,7 +1,8 @@
 @import 'config';
-@import 'index';
 @import 'menu';
+@import 'index';
 @import 'about';
+@import 'work';
 
 * {
   box-sizing: border-box;
@@ -76,7 +77,44 @@ main {
   }
 }
 
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    'bioimage bio bio'
+    'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr);
 
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+
+  .job-2 {
+    grid-area: job2;
+  }
+
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
 
 // Work/Projects
 .projects {
@@ -123,7 +161,7 @@ main {
 }
 
 // Button Styles
-.btns {
+.btn {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
@@ -134,14 +172,14 @@ main {
   }
 }
 
-.btn-darks {
-  @extend .btns;
+.btn-dark {
+  @extend .btn;
   background: darken($primary-color, 50);
   color: #fff;
 }
 
-.btn-lights {
-  @extend .btns;
+.btn-light {
+  @extend .btn;
   background: lighten($primary-color, 50);
   color: #333;
 }
