@@ -85,6 +85,23 @@
   .card {
     grid-template-columns: 1fr;
   }
+
+  .company-info {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 20px;
+    border-top-right-radius: 0px;
+  }
+
+  .contact {
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0;
+  }
+
+  .row{
+    margin: 0;
+    padding: 0;
+  }
 }
 
 
@@ -134,18 +151,18 @@
   }
 
   #work {
-    // width: 100vw;
     display: grid;
-    // align-items: center;
-    // justify-content: center;
-    // background:url("../img/background.jpg");
-    // overflow: hidden;
     grid-template-columns: 1fr;
   }
 
+  .company-info {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 20px;
+  }
 
-  .card {
-    // grid-template-columns: 1fr;
+  .contact {
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
   }
 }
 

@@ -1,10 +1,9 @@
 #work {
   width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background:url("background.jpg");
+  background:url("../img/background.jpg");
   overflow: hidden;
 }
 .card {
@@ -26,7 +25,7 @@
 }
 .card-image {
   grid-area: image;
-  background: url("img1.jpg");
+  background: url("../img/goat.png");
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
@@ -48,11 +47,12 @@
 .card-text h2 {
   margin-top:0px;
   font-size:28px;
+  color: #000;
 }
 .card-stats {
   grid-area: stats; 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -70,18 +70,30 @@
   border-left: 1px solid rgb(172, 26, 87);
   border-right: 1px solid rgb(172, 26, 87);
 }
-.card-stats .value{
-  font-size:22px;
-  font-weight: 500;
+
+.card-stats a:hover{
+  color: rgb(9, 4, 39);
+  text-decoration: underline;
 }
-.card-stats .value sup{
-  font-size:12px;
+
+.btn-dark{
+  padding:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  border-right: 1px solid rgb(172, 26, 87);
 }
-.card-stats .type{
-  font-size:11px;
-  font-weight: 300;
-  text-transform: uppercase;
+
+.btn-light {
+  padding:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // border-right: 1px solid rgb(172, 26, 87);
 }
+
 .card:hover {
   transform: scale(1.15);
   box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
@@ -89,7 +101,7 @@
 
 /*card2*/
 .card-image.card2 {
-  background: url("img2.jpg");
+  background: url("../img/alpine.png");
   background-size: cover;
 }
 .card-text.card2 .date {
@@ -104,7 +116,7 @@
 }
 /*card3*/
 .card-image.card3 {
-  background: url("img3.jpg");
+  background: url("../img/img3.jpg");
   background-size: cover;
 }
 .card-text.card3 .date {
